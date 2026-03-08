@@ -69,13 +69,20 @@
 </footer>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-      Fancybox.bind("[data-fancybox='gallery']", {
-        // Opzioni aggiuntive:
-        compact: false,
-        idle: false,
-      });
-    </script>
+ <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+<script>
+  Fancybox.bind("[data-fancybox='gallery']", {
+    // Opzioni per rendere lo zoom più fluido
+    Thumbs: false,
+    Toolbar: {
+        display: {
+            left: ["infobar"],
+            middle: [],
+            right: ["iterateZoom", "close"],
+        },
+    },
+  });
+</script>
 </body>
 </html>
