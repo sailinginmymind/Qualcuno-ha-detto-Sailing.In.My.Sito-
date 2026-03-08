@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetti | Alexandru Chiscop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+</head>
+<body>
+
+    <nav class="container">
+        <ul>
+            <li><a href="index.html" class="logo">AC</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header>
+            <h1>I Miei Progetti</h1>
+            <p class="hero-subtitle">Una raccolta delle sfide che ho affrontato e delle soluzioni che ho sviluppato nel settore energetico e tecnologico.</p>
+        </header>
+
+        <div class="projects-grid">
+            
+            <div class="project-card featured gallery-card">
+                <div class="project-gallery">
+                    <a href="img/vibesolar1.png" data-fancybox="gallery" data-caption="Vibe Solar - Dashboard Principale">
+                        <img src="img/vibesolar1.png" alt="Design Vibe Solar" class="gallery-img">
+                    </a>
+                    <a href="img/vibesolar2.png" data-fancybox="gallery" data-caption="Vibe Solar - Analisi Energetica">
+                        <img src="img/vibesolar2.png" alt="Monitoraggio dati" class="gallery-img">
+                    </a>
+                    <a href="img/vibesolar3.png" data-fancybox="gallery" data-caption="Vibe Solar - Configurazione Sistema">
+                        <img src="img/vibesolar3.png" alt="Installazione" class="gallery-img">
+                    </a>
+                </div>
+
+                <div class="card-content">
+                    <span class="tag">Flagship Project</span>
+                    <h2>Solar Vibe 3.0</h2>
+                    <p>Soluzione applicativa e strumento volto a monitorare e gestire le previsioni della produzione dei sistemi energetici del Camper/Van.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="tag">Analisi</span>
+                <h3>Eco-Monitor</h3>
+                <p>Monitora l'eco nella stanza in cui si urla.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="tag">Smart Home</span>
+                <h3>Green Hub</h3>
+                <p>Concept per l'integrazione di sistemi domotici alimentati da fonti rinnovabili.</p>
+            </div>
+
+        </div>
+
+        <footer id="contatti">
+    <hr style="border-color: #222; margin-bottom: 40px;">
+    <p>Vuoi approfondire un progetto?</p>
+    <a href="mailto:chiscopalexandru97@gmail.com" class="btn-contact">Scrivimi</a>
+</footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind("[data-fancybox='gallery']", {
+        // Opzioni aggiuntive:
+        compact: false,
+        idle: false,
+      });
+    </script>
+</body>
+</html>
