@@ -227,6 +227,7 @@ h2 {
 .btn-contact:hover {
     background-color: var(--primary);
     color: #fff !important;
+    transform: scale(1.05); /* Effetto ingrandimento quando ci passi sopra */
     box-shadow: 0 0 20px rgba(0, 168, 255, 0.4);
 }
 
@@ -267,3 +268,17 @@ h2 {
 }
 
 #theme-toggle:hover { transform: scale(1.2); }
+/* 10. FOOTER - SPAZIATURA FINALE */
+footer {
+    padding-bottom: 80px; /* Aumentiamo lo spazio bianco (nero) in fondo */
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* Opzionale: se vuoi che la linea orizzontale sia meno invasiva */
+footer hr {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-color: var(--nav-border);
+    opacity: 0.3;
+}
