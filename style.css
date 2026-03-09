@@ -466,3 +466,11 @@ table[role="grid"] td {
         padding: 0 !important;
     }
 }
+
+@media (max-width: 768px) {
+    /* Riduce il bagliore che causava lo spostamento */
+    .cover-container img {
+        box-shadow: 0 0 100px rgba(214, 51, 255, 0.5) !important;
+        max-width: 100%;
+    }
+}
