@@ -35,31 +35,41 @@
             <h1>Alexandru Chiscop</h1>
             
             <div class="image-container">
-                <img src="profilo.jpg" alt="Foto di Alexandru Chiscop" class="profile-pic">
+                <img src="profilo.webp" alt="Foto di Alexandru Chiscop" class="profile-pic">
             </div>
             
-            <p class="hero-subtitle"><strong>Benvenuti nella mia vetrina delle competenze.</strong></p>
-            <p class="hero-subtitle">Qui cercherò di raccogliere i miei progetti e racconterò ciò che so fare nel settore Energy (e non solo)</p>
-        </header>
+            <p class="hero-subtitle"><strong>Benvenuti!</strong></p>
+<p style="font-style: italic; color: var(--text-muted); border-left: 2px solid var(--primary); padding-left: 15px; margin-top: 20px;">
+    "Era diventato imperativo ritagliarmi uno spazio dove inserire tutti i miei progetti (passati, attuali e futuri) in modo da non perdere le idee (e sopratutto farmi capire meglio).
+</p>        </header>
 
-        <section id="competenze">
-            <h2>Cosa so fare</h2>
-            <ul>
-                <li>Gestione Progetti Energetici</li>
-                <li>Sviluppo Concept "Vibe Solar"</li>
-            </ul>
-        </section>
 
-        <section id="progetti">
-            <h2>I miei Progetti</h2>
-            <div class="project-card">
-                <h3>Vibe Solar</h3>
-                <p>Descrizione del tuo progetto principale, obiettivi e tecnologie.</p>
-                <span class="tag">Camper e Van Life</span>
-                <br><br>
-                <a href="progetti.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">Scopri il progetto →</a>
-            </div>
-            <div class="project-card">
+<section class="project-card featured">
+    <div class="card-content">
+        <span class="tag">Flagship Project</span>
+        <h2>Solar Vibe 3.0</h2>
+        <p>Dall'analisi dei dati alla gestione energetica off-grid. Uno strumento progettato per ottimizzare l'autonomia dei sistemi solari in mobilità, unendo precisione tecnica e facilità d'uso.</p>
+        
+        <a href="vibe-solar.html" class="btn-contact">APPROFONDISCI IL PROGETTO →</a>
+    </div>
+</section>
+
+<section class="project-card featured neon-card" 
+         style="margin-bottom: 50px; 
+                position: relative;
+                z-index: 1; /* Layer di base per la card */
+                border: 2px solid rgba(214, 51, 255, 0.3); /* Bordo neon coordinato */
+                transition: box-shadow 0.3s ease, transform 0.3s ease;"> <div class="card-content">
+        <span class="tag" style="background: rgba(214, 51, 255, 0.1); color: #d633ff; border: 1px solid rgba(214, 51, 255, 0.3); font-weight: bold;">
+            Music & Editing
+        </span>
+        <h2 style="border: none; margin-bottom: 10px;">Slowed & Reverbed Channel</h2>
+        <p style="max-width: 600px;">Un'analisi pratica di content creation e sound design. Gestione di un canale con oltre 4 milioni di visualizzazioni, curando l'editing audio e l'estetica visiva tramite Canva.</p>
+        
+        <a href="dettaglio-youtube.html" class="btn-contact btn-youtube-theme">APPROFONDISCI IL PROGETTO →</a>
+    </div>
+</section>
+          <div class="project-card">
                 <span class="tag">App Utili</span>
                 <h3 style="margin-top: 15px;">Generatore di Password</h3>
                 <p style="color: var(--text-muted);">
@@ -68,23 +78,27 @@
                 <a href="#" style="color: var(--primary); text-decoration: none; font-weight: bold;">Leggi di più →</a>
             </div>
         </section>
+        <section class="cta-more-projects" style="margin-top: 80px; margin-bottom: 80px; text-align: center; padding: 40px; border: 1px dashed rgba(255,255,255,0.2); border-radius: 20px; background: rgba(255,255,255,0.02);">
+    <h3 style="margin-bottom: 10px;">E questo è solo l'inizio...</h3>
+    <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 30px auto;">
+        Ho altri concept in fase di sviluppo e progetti passati che aspettano solo di essere raccontati. Io un'occhiata gliela darei, non si sa mai che trovi qualcosa di interessante!
+    </p>
+    
+    <a href="progetti.html" class="btn-contact" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+        Esplora l'archivio completo 
+        <span style="font-size: 1.2rem;">📂</span>
+    </a>
+</section>
 
-        <section id="formazione">
-            <h2>Formazione:</h2>
-            <ul>
-                <li>Laurea <strong>Magistrale</strong> in "Economia, Management e Controllo" presso l'Università di Pisa;</li>
-                <li>Laurea Triennale in "Economia Aziendale" presso l'Università di Pisa.</li>
-            </ul>
-        </section>
 
-        <footer>
-    <hr style="border-color: #222; margin-top: 30px; margin-bottom: 20px;">
-    <div style="text-align: center;">
-        <p>Ti piace il mio lavoro?</p>
-        <a href="contatti.html" class="btn-contact">Lavoriamo insieme</a>
+<footer>
+    <hr>
+    <div style="margin-bottom: 20px;">
+        <a href="https://www.linkedin.com/in/alexandru-chiscop-0b2a1a1a/" target="_blank" style="margin-right: 15px; text-decoration: none;">LinkedIn</a>
+        <a href="mailto:alexandru.chiscop@gmail.com" style="text-decoration: none;">Email</a>
     </div>
-</footer>
-    </main>
+    <p>© 2026 Alexandru Chiscop </p>
+</footer>    </main>
 
 <script>
   const themeToggle = document.getElementById('theme-toggle');

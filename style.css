@@ -103,11 +103,24 @@ h2 {
     margin-bottom: 30px;
 }
 
-.hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto;
+/* PORTA TUTTO L'HEADER IN PRIMO PIANO */
+header h1, 
+header .hero-subtitle {
+    position: relative;        /* Necessario per attivare lo z-index */
+    z-index: 99;               /* Un valore alto per stare sopra il bagliore da 1000px */
+    color: #ffffff !important; /* Bianco puro per massima leggibilità */
+}
+
+header .hero-subtitle {
+    opacity: 0.9;              /* Leggermente meno intenso del titolo per gerarchia, ma sempre bianco */
+    font-weight: 500;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.8); /* Ombra scura per "staccare" dal viola neon sottostante */
+}
+
+/* ASSICURATI CHE IL CONTENITORE DEL GLOW STIA SOTTO */
+.cover-container {
+    position: relative;
+    z-index: 1;                /* Layer di base per il bagliore */
 }
 
 /* 4. IMMAGINE PROFILO */
@@ -137,6 +150,9 @@ h2 {
     border: 1px solid var(--nav-border);
     transition: 0.4s;
     margin-bottom: 30px;
+    /* FORZA TUTTO A SINISTRA */
+    align-items: flex-start; 
+    text-align: left;
 }
 
 .project-card:hover {
@@ -281,4 +297,166 @@ footer hr {
     margin-bottom: 30px;
     border-color: var(--nav-border);
     opacity: 0.3;
+}
+/* 11. BOTTONE TORNA INDIETRO - Versione Alta Visibilità */
+.btn-back {
+    display: inline-block !important;
+    padding: 10px 25px !important;
+    /* Usiamo l'azzurro per il bordo invece del grigio */
+    border: 1.5px solid var(--primary) !important; 
+    border-radius: 50px !important;
+    /* Usiamo l'azzurro per il testo */
+    color: var(--primary) !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    font-weight: 700; /* Testo un po' più spesso per leggere meglio */
+    background-color: transparent;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    /* Quando passi il mouse, il tasto si "riempie" di colore */
+    background-color: var(--primary) !important;
+    color: #ffffff !important; /* Testo bianco sul fondo azzurro */
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+    transform: translateX(-5px);
+}
+
+.cover-container img {
+    box-shadow: 0 0 1000px rgba(214, 51, 255, 0.4);
+    border: 2px solid var(--primary);
+}
+/* 1. Stato Normale della Copertina */
+.cover-container img {
+    /* Il tuo glow esagerato che crea l'atmosfera */
+    box-shadow: 0 0 1000px rgba(214, 51, 255, 0.7) !important;
+    
+    /* Aggiungiamo un bordo coordinato per definire l'immagine */
+    border: 2px solid var(--primary);
+    
+    /* Transizione fluida di 0.5 secondi per un effetto "respiro" */
+    transition: all 0.5s ease-in-out !important;
+}
+
+/* 2. Stato Hover (Passaggio del mouse) */
+.cover-container img:hover {
+    /* Manteniamo il glow a 1000px, ma aumentiamo leggermente l'opacità per farlo "accendere" */
+    box-shadow: 0 0 1000px rgba(214, 51, 255, 0.9) !important;
+    
+    /* Facciamo brillare di più anche il bordo */
+    border-color: #ff33a8 !important; /* Rosa acceso */
+    
+    /* Un leggerissimo ingrandimento per feedback tattile */
+    transform: scale(1.01);
+}
+/* Ingrandimento numeri Channel Insights */
+table[role="grid"] td strong {
+    font-size: 1rem;           /* Rende il numero molto grande */
+    color: var(--primary);     /* Usa il viola neon che abbiamo impostato */
+    display: block;            /* Lo mette su una riga dedicata per dargli importanza */
+    line-height: 1;
+    margin-top: 5px;
+    text-shadow: 0 0 15px rgba(214, 51, 255, 0.4); /* Un leggero glow anche sul numero */
+    transition: transform 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse sulla riga della tabella */
+table[role="grid"] tr:hover td strong {
+    transform: scale(1.1);     /* Il numero si ingrandisce leggermente quando passi sulla riga */
+}
+
+/* Rende le etichette (Metrica) più leggibili accanto ai numeri grandi */
+table[role="grid"] td {
+    vertical-align: middle;
+    padding: 20px 10px;
+}
+.card-gif-container {
+    width: 100%;
+    /* Definisce una proporzione fissa (es. rettangolo 16:9) */
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 15px 0;
+    background: #000; /* Sfondo nero se la gif carica lentamente */
+}
+
+.card-gif-container img {
+    width: 100%;
+    height: 100%;
+    /* Fondamentale: la gif si adatta al contenitore senza deformarsi */
+    object-fit: cover; 
+    display: block;
+}
+/* Colore personalizzato per il tasto Slowed & Reverbed nella Home */
+.btn-youtube-theme {
+    color: #d633ff !important;            /* Il viola che abbiamo scelto */
+    border-color: #d633ff !important;     /* Bordo viola */
+}
+
+.btn-youtube-theme:hover {
+    background-color: #d633ff !important; /* Riempimento viola all'hover */
+    color: white !important;               /* Testo bianco all'hover */
+    box-shadow: 0 0 15px rgba(214, 51, 255, 0.4); /* Un mini-glow anche qui! */
+}
+.cta-more-projects {
+    transition: all 0.3s ease;
+}
+
+.cta-more-projects:hover {
+    background: rgba(255,255,255,0.05) !important;
+    border-style: solid !important;
+    border-color: var(--primary) !important;
+    transform: translateY(-5px);
+}
+
+/* Stile per la card di YouTube nella pagina Progetti */
+.neon-hover-card {
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Transizione fluida per movimento e colore */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordo di base quasi invisibile o standard */
+}
+
+/* Effetto al passaggio del mouse (Hover) */
+.neon-hover-card:hover {
+    transform: translateY(-10px); /* Si alza esattamente come le altre card "featured" */
+    border: 1px solid #d633ff !important; /* Tutto il bordo diventa viola neon */
+    box-shadow: none !important; /* Nessun alone, solo il bordo netto */
+}
+
+/* Assicuriamoci che il titolo resti invariato */
+.neon-hover-card:hover h2 {
+    color: white !important; /* Forza il titolo a restare bianco */
+}
+/* --- 12. OTTIMIZZAZIONE LOGO YOUTUBE --- */
+.project-image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Logo a sinistra */
+    margin-bottom: 25px;
+}
+
+.project-image img {
+    max-width: 150px; /* Dimensione contenuta per il logo */
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+/* --- 13. RESPONSIVE PER CARD A DUE COLONNE --- */
+@media (max-width: 768px) {
+    .neon-hover-card {
+        flex-direction: column !important; /* Impila immagine sopra testo */
+        text-align: center;
+        padding: 20px !important;
+    }
+    
+    .project-image {
+        max-width: 200px; /* Più piccolo su mobile per non ingombrare */
+        margin: 0 auto 20px auto;
+    }
+
+    .neon-hover-card .card-content {
+        padding: 0 !important;
+    }
 }

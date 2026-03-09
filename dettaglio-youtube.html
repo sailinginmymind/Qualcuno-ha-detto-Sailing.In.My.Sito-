@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slowed & Reverbed | Content Creation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+    :root {
+        /* Sovrascriviamo il blu con un viola/fucsia vibrante */
+        --primary: #d633ff; 
+        /* Creiamo una sfumatura per i dettagli */
+        --accent-pink: #ff33a8;
+    }
+    /* Cambiamo il colore dei tag e dei bordi delle card al passaggio del mouse */
+    .tag {
+        background: rgba(214, 51, 255, 0.1);
+        color: var(--primary);
+    }
+    .project-card:hover, .gallery-img:hover {
+        border-color: var(--primary) !important;
+        box-shadow: 0 10px 30px rgba(214, 51, 255, 0.2);
+    }
+    /* Il tasto torna indietro ora seguirà il nuovo tema viola */
+    .btn-back {
+        border-color: var(--primary) !important;
+        color: var(--primary) !important;
+    }
+    
+    .btn-back:hover {
+        background-color: var(--primary) !important;
+        color: white !important;
+    }
+    nav.container {
+    position: relative;
+    z-index: 100; /* Ancora più su di tutto il resto */
+}
+</style>
+</head>
+<body>
+    <nav class="container">
+        <ul>
+            <li><a href="index.html" class="logo"><strong>AC</strong></a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li>
+                <a href="#" id="theme-toggle" role="button" class="outline" style="padding: 5px 10px; border: none; text-decoration: none;">🌙</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+    <header>
+        <h1>Slowed & Reverbed</h1>
+        <p class="hero-subtitle">Una rivisitazione dei miei brani preferiti in chiave "Slowed and Reverbed".</p>
+    </header>
+
+    <section>
+        <div class="cover-container">
+        <img src="S&R Copertina Youtube.png" alt="YouTube Cover" class="gallery-img" style="width: 100%; height: auto; border-radius: 20px;">        </div>
+    </section>
+
+    <section style="margin-top: 50px;">
+        <h3>Channel Insights</h3>
+        <table role="grid">
+            <thead>
+                <tr>
+                    <th>Metrica</th>
+                    <th>Risultato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Visualizzazioni Canale</td>
+                    <td><strong>+ 4.000.000</strong></td>
+                </tr>
+                <tr>
+                    <td>Tempo di Visualizzazione</td>
+                    <td><strong>+ 4.000 h</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+<div class="projects-grid">
+<article class="project-card">
+    <h3>Visual Design (GIF)</h3>
+    
+    <div class="card-gif-container">
+        <img src="dancegif.gif" alt="Esempio Visual Design">
+    </div>
+    
+    <p>Utilizzo le GIF per creare l'identità estetica del canale, bilanciando minimalismo e impatto visivo.</p>
+</article>
+    <article class="project-card">
+        <h3>Audio Editing</h3>
+        <div style="height: 150px; margin: 15px 0; display: flex; align-items: center; justify-content: center; background: rgba(214, 51, 255, 0.03); border-radius: 12px; border: 1px dashed rgba(214, 51, 255, 0.2);">
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Audio Processing Focus</span>
+        </div>
+        <p>Editing ridotto al minimo per ottenere l'effetto "Slowed & Reverb" perfetto, preservando l'anima del brano originale.</p>
+    </article>
+</div>
+    <section style="margin-top: 60px;">
+        <h3 style="text-align: center;">L'ultima canzone aggiunta:</h3>
+        <div class="youtube-container" style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/mVdpFXuRQGY?list=PLyrZqgPrpMwNkNEJm7IKS1KAnetjEFV27" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+        <a href="https://www.youtube.com/@SlowedAndReverbed789" target="_blank" class="btn-contact" style="background-color: #ff0000; border-color: #ff0000; color: white !important;">
+            Vai al Canale YouTube
+        </a>
+    </section>
+
+    <footer style="margin-top: 60px; text-align: center;">
+        <div style="margin-bottom: 40px;">
+            <a href="progetti.html" class="btn-back">
+                ← Torna a tutti i progetti
+            </a>
+        </div>
+        <hr>
+        <p>© 2026 Alexandru Chiscop</p>
+    </footer>
+</main>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlTag = document.documentElement;
+
+      function updateIcon(theme) {
+        themeToggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+      }
+
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      htmlTag.setAttribute('data-theme', savedTheme);
+      updateIcon(savedTheme);
+
+      themeToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        let currentTheme = htmlTag.getAttribute('data-theme');
+        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        htmlTag.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcon(newTheme);
+      });
+    </script>
+</body>
+</html>
