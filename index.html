@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Alexandru Chiscop | Portfolio">
+    <meta property="og:description" content="Esperto nel settore Energy e appassionato di tecnologia. Guarda i miei progetti.">
+    <meta property="og:image" content="profilo.jpg">
     <title>Alexandru Chiscop | Portfolio</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="container">
-        <ul>
+   <nav class="container">
+    <ul>
         <li>
             <a href="index.html" class="logo"><strong>AC</strong></a>
         </li>
     </ul>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="progetti.html">Progetti</a></li>
-            <li><a href="#contatti">Contatti</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="progetti.html">Progetti</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li>
+            <a href="#" id="theme-toggle" role="button" class="outline" style="padding: 5px 10px; border: none; text-decoration: none;">🌙</a>
+        </li>
+    </ul> 
+   </nav>
 
     <main class="container"> 
         <header>
@@ -54,15 +59,16 @@
                 <a href="progetti.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">Scopri il progetto →</a>
             </div>
             <div class="project-card">
-    <span class="tag">App Utili</span>
-    <h3 style="margin-top: 15px;">Generatore di Password</h3>
-    <p style="color: var(--text-muted);">
-        Un'applicazione semplice ma efficace per creare password sicure e personalizzate. Scegli la lunghezza, i caratteri e genera una password in pochi secondi.
-    </p>
-    <a href="#" style="color: var(--primary); text-decoration: none; font-weight: bold;">Leggi di più →</a>
-</div>
+                <span class="tag">App Utili</span>
+                <h3 style="margin-top: 15px;">Generatore di Password</h3>
+                <p style="color: var(--text-muted);">
+                    Un'applicazione semplice ma efficace per creare password sicure e personalizzate. Scegli la lunghezza, i caratteri e genera una password in pochi secondi.
+                </p>
+                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: bold;">Leggi di più →</a>
+            </div>
         </section>
-        <section id="competenze">
+
+        <section id="formazione">
             <h2>Formazione:</h2>
             <ul>
                 <li>Laurea <strong>Magistrale</strong> in "Economia, Management e Controllo" presso l'Università di Pisa;</li>
@@ -70,11 +76,38 @@
             </ul>
         </section>
 
-<footer id="contatti">
-    <hr style="border-color: #222; margin-bottom: 40px;">
-    <p>Vuoi approfondire un progetto?</p>
-    <a href="mailto:chiscopalexandru97@gmail.com" class="btn-contact">Scrivimi</a>
-</footer>    </main>
+        <footer>
+            <hr style="border-color: #222; margin-top: 60px; margin-bottom: 40px;">
+            <div style="text-align: center;">
+                <p>Ti piace il mio lavoro?</p>
+                <a href="contatti.html" class="btn-contact">Lavoriamo insieme</a>
+            </div>
+        </footer>
+    </main>
 
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const htmlTag = document.documentElement;
+
+  // Funzione per aggiornare l'icona
+  function updateIcon(theme) {
+    themeToggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+  }
+
+  // 3. LOGICA POTENZIATA: Imposta il tema salvato o quello di default (dark)
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  htmlTag.setAttribute('data-theme', savedTheme);
+  updateIcon(savedTheme);
+
+  themeToggle.addEventListener('click', (e) => {
+    e.preventDefault(); // Impedisce lo scroll verso l'alto al clic
+    let currentTheme = htmlTag.getAttribute('data-theme');
+    let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    htmlTag.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateIcon(newTheme);
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti | Alexandru Chiscop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="container">
+        <ul>
+            <li><a href="index.html" class="logo">AC</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li>
+                <a href="#" id="theme-toggle" role="button" class="outline" style="padding: 5px 10px; border: none; text-decoration: none;">🌙</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="contact-section">
+            <h1>Mettiamoci in contatto</h1>
+            <p class="hero-subtitle">Disponibile per collaborazioni nel settore energetico e tech.</p>
+
+            <div class="contact-grid">
+                <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Connettiamoci professionalmente</p>
+                </a>
+
+                <a href="https://github.com/sailinginmymind" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Guarda il mio codice</p>
+                </a>
+
+                <a href="mailto:chiscopalexandru97@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>Scrivimi un messaggio diretto</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlTag = document.documentElement;
+
+      function updateIcon(theme) {
+        themeToggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+      }
+
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      htmlTag.setAttribute('data-theme', savedTheme);
+      updateIcon(savedTheme);
+
+      themeToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        let currentTheme = htmlTag.getAttribute('data-theme');
+        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlTag.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcon(newTheme);
+      });
+    </script>
+</body>
+</html>

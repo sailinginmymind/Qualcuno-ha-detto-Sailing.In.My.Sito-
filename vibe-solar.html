@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
+<html lang="it" data-theme="dark"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vibe Solar | Case Study</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 </head>
@@ -16,6 +16,10 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li>
+                <a href="#" id="theme-toggle" role="button" class="outline" style="padding: 5px 10px; border: none; text-decoration: none;">🌙</a>
+            </li>
         </ul>
     </nav>
 
@@ -28,9 +32,9 @@
             </header>
 
             <div class="project-gallery" style="margin: 40px 0;">
-                <a href="img/vibesolar1.png" data-fancybox="gallery"><img src="img/vibesolar1.png" class="gallery-img"></a>
-                <a href="img/vibesolar2.png" data-fancybox="gallery"><img src="img/vibesolar2.png" class="gallery-img"></a>
-                <a href="img/vibesolar3.png" data-fancybox="gallery"><img src="img/vibesolar3.png" class="gallery-img"></a>
+                <a href="vibesolar1.png" data-fancybox="gallery"><img src="vibesolar1.png" class="gallery-img"></a>
+                <a href="vibesolar2.png" data-fancybox="gallery"><img src="vibesolar2.png" class="gallery-img"></a>
+                <a href="vibesolar3.png" data-fancybox="gallery"><img src="vibesolar3.png" class="gallery-img"></a>
             </div>
 
             <div class="grid">
@@ -50,7 +54,7 @@
                 <h2>Dettagli Tecnici</h2>
                 <ul>
                     <li><strong>Analisi:</strong> Calcolo dei flussi energetici in tempo reale.</li>
-                    <li><strong>UX Design:</strong> Progettata per essere leggibile anche sotto la luce diretta del sole.</li>
+                    <li><strong>UX Design:</strong> Intuitiva, a prova di "non addetto ai lavori".</li>
                     <li><strong>Target:</strong> Vanlifers, campeggiatori e appassionati di energie rinnovabili.</li>
                 </ul>
             </section>
@@ -62,6 +66,31 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>Fancybox.bind("[data-fancybox='gallery']", {});</script>
+    <script>
+      // Attiva Fancybox
+      Fancybox.bind("[data-fancybox='gallery']", {});
+
+      // Logica Cambio Tema
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlTag = document.documentElement;
+
+      function updateIcon(theme) {
+        themeToggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+      }
+
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      htmlTag.setAttribute('data-theme', savedTheme);
+      updateIcon(savedTheme);
+
+      themeToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        let currentTheme = htmlTag.getAttribute('data-theme');
+        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlTag.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcon(newTheme);
+      });
+    </script>
 </body>
 </html>
