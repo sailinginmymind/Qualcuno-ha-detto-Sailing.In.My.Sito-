@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <body class="project-blue"></body>
+
 </head>
 <body>
 
@@ -18,8 +20,6 @@
             <li><a href="progetti.html">Progetti</a></li>
             <li><a href="contatti.html">Contatti</a></li>
             <li>
-                <a href="#" id="theme-toggle" role="button" class="outline" style="padding: 5px 10px; border: none; text-decoration: none;">🌙</a>
-            </li>
         </ul>
     </nav>
 
@@ -33,14 +33,8 @@
             
             <div class="project-card featured gallery-card">
                 <div class="project-gallery">
-                    <a href="vibesolar1.png" data-fancybox="gallery" data-caption="Vibe Solar - Dashboard Principale">
-                        <img src="vibesolar1.png" alt="Design Vibe Solar" class="gallery-img">
-                    </a>
-                    <a href="vibesolar2.png" data-fancybox="gallery" data-caption="Vibe Solar - Analisi Energetica">
-                        <img src="vibesolar2.png" alt="Monitoraggio dati" class="gallery-img">
-                    </a>
-                    <a href="vibesolar3.png" data-fancybox="gallery" data-caption="Vibe Solar - Configurazione Sistema">
-                        <img src="vibesolar3.png" alt="Installazione" class="gallery-img">
+                    <a href="vibesolarlogopng.png" data-fancybox="gallery" data-caption="Vibe Solar - Dashboard Principale">
+                        <img src="vibesolarlogopng.png" alt="Design Vibe Solar" class="gallery-img">
                     </a>
                 </div>
 
@@ -72,12 +66,20 @@
             APPROFONDISCI IL PROGETTO →
         </a>
     </div>
-</section><div class="project-card">
-                <span class="tag">Smart Home</span>
-                <h3>Green Hub</h3>
-                <p>Concept per l'integrazione di sistemi domotici alimentati da fonti rinnovabili.</p>
-            </div>
+</section>
+    <div class="project-card featured vibe-card gallery-card">
+    
 
+    <div class="card-content">
+        <span class="tag" style="background: rgba(0, 255, 65, 0.1); color: #00ff41; border: 1px solid rgba(0, 255, 65, 0.3); font-weight: bold;">
+            Cyber Security & UX
+        </span>
+        <h2>Vibe Password v2.0</h2>
+        <p>Un generatore di password avanzato con analisi dell'entropia in tempo reale e stima dei tempi di attacco. Progettato per unire sicurezza e un'estetica High-Tech.</p>
+        
+        <a href="dettaglio-password.html" class="btn-contact btn-vibe-color">APPROFONDISCI IL PROGETTO →</a>
+    </div>
+</div>
         </div>
 
        <footer>
@@ -92,12 +94,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-      // Attivazione Fancybox
-      Fancybox.bind("[data-fancybox='gallery']", {
-        compact: false,
-        idle: false,
-      });
-
+     
       // Logica Tema
       const themeToggle = document.getElementById('theme-toggle');
       const htmlTag = document.documentElement;
@@ -119,6 +116,15 @@
         localStorage.setItem('theme', newTheme);
         updateIcon(newTheme);
       });
+      // Attivazione Fancybox per tutte le gallerie
+Fancybox.bind("[data-fancybox]", {
+  compact: false,
+  idle: false,
+});
+<body class="home-page">
+    <nav class="container nav-home">
+        </nav>
     </script>
+    
 </body>
 </html>

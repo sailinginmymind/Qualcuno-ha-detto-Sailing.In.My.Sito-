@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it" data-theme="dark">
 <head>
+    <body class="project-blue"></body>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Alexandru Chiscop | Portfolio">
@@ -25,8 +26,6 @@
         <li><a href="progetti.html">Progetti</a></li>
         <li><a href="contatti.html">Contatti</a></li>
         <li>
-            <a href="#" id="theme-toggle" role="button" class="outline" style="padding: 5px 10px; border: none; text-decoration: none;">🌙</a>
-        </li>
     </ul> 
    </nav>
 
@@ -69,14 +68,27 @@
         <a href="dettaglio-youtube.html" class="btn-contact btn-youtube-theme">APPROFONDISCI IL PROGETTO →</a>
     </div>
 </section>
-          <div class="project-card">
-                <span class="tag">App Utili</span>
-                <h3 style="margin-top: 15px;">Generatore di Password</h3>
-                <p style="color: var(--text-muted);">
-                    Un'applicazione semplice ma efficace per creare password sicure e personalizzate. Scegli la lunghezza, i caratteri e genera una password in pochi secondi.
-                </p>
-                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: bold;">Leggi di più →</a>
-            </div>
+          <section class="project-card featured vibe-card" 
+         style="margin-bottom: 50px; 
+                position: relative;
+                border: 2px solid rgba(0, 255, 65, 0.2); 
+                background: linear-gradient(145deg, rgba(0, 255, 65, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+                transition: all 0.3s ease;">
+    <div class="card-content">
+        <span class="tag" style="background: rgba(0, 255, 65, 0.1); color: #00ff41; border: 1px solid rgba(0, 255, 65, 0.3); font-weight: bold;">
+            Cyber Security & UX
+        </span>
+        <h2 style="border: none; margin-bottom: 10px;">Vibe Password v2.0</h2>
+        <p style="max-width: 600px;">
+            Un generatore di password avanzato che unisce sicurezza crittografica e un'interfaccia <em>High-Tech</em>. 
+            Include analisi dell'entropia in tempo reale, stima dei tempi di brute-force e temi dinamici (Green/Pink).
+        </p>
+        
+<div style="display: flex; gap: 15px; margin-top: 20px; align-items: center;">
+<a href="dettaglio-password.html" class="btn-contact btn-vibe-color">APPROFONDISCI L'APP →</a>    
+</div>    
+</div>
+</section>
         </section>
         <section class="cta-more-projects" style="margin-top: 80px; margin-bottom: 80px; text-align: center; padding: 40px; border: 1px dashed rgba(255,255,255,0.2); border-radius: 20px; background: rgba(255,255,255,0.02);">
     <h3 style="margin-bottom: 10px;">E questo è solo l'inizio...</h3>
@@ -98,7 +110,8 @@
         <a href="mailto:alexandru.chiscop@gmail.com" style="text-decoration: none;">Email</a>
     </div>
     <p>© 2026 Alexandru Chiscop </p>
-</footer>    </main>
+</footer>    
+</main>
 
 <script>
   const themeToggle = document.getElementById('theme-toggle');
