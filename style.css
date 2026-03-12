@@ -1053,3 +1053,91 @@ footer p,
 .footer-nav {
     margin-bottom: 5px !important; /* Era 20px, ora quasi nullo */
 }
+
+/* --- FIX LOGO VIBE SOLAR TONDO --- */
+
+/* Contenitore che si allinea al testo della card */
+.project-image-solar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px; /* Evita che diventi troppo piccolo su schermi medi */
+}
+
+/* La cornice tonda */
+.circular-frame-solar {
+    width: 250px;           /* Dimensione su PC */
+    height: 250px;
+    border-radius: 50%;     /* Lo rende tondo */
+    overflow: hidden;       /* Taglia i bordi dell'immagine */
+    border: 2px solid rgba(0, 162, 255, 0.3); /* Bordo blu coordinato */
+    box-shadow: 0 0 20px rgba(0, 162, 255, 0.1); /* Leggero bagliore */
+    transition: all 0.4s ease;
+}
+
+.circular-frame-solar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Riempie il cerchio perfettamente */
+}
+
+/* Effetto al passaggio del mouse sulla card */
+.project-card:hover .circular-frame-solar {
+    border-color: #00a2ff;
+    box-shadow: 0 0 30px rgba(0, 162, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* --- ADATTAMENTO MOBILE --- */
+@media (max-width: 768px) {
+    .project-image-solar {
+        margin-bottom: 20px;
+        min-width: 100%;
+    }
+    
+    .circular-frame-solar {
+        width: 180px; /* Più piccolo su smartphone */
+        height: 180px;
+    }
+}
+
+/* Forza il blu solo sulla card Vibe Solar */
+.vibe-solar-card:hover {
+    border-color: #00a2ff !important;
+    box-shadow: 0 0 30px rgba(0, 162, 255, 0.4) !important;
+}
+
+/* Mantiene il viola su tutte le altre neon-hover-card (come YouTube) */
+.neon-hover-card:not(.vibe-solar-card):hover {
+    border-color: #d633ff !important;
+    box-shadow: 0 0 30px rgba(214, 51, 255, 0.4) !important;
+}
+/* --- FIX ILLUMINAZIONE VERDE --- */
+
+/* Forza il colore verde ed elimina ogni traccia di viola su questa card */
+.neon-hover-card.vibe-password-card:hover {
+    border-color: #00ff41 !important;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.5) !important;
+}
+
+/* 1. L'hover sulla card accende SOLO la card (VERDE) */
+.vibe-password-card:hover {
+    border-color: #00ff41 !important;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.4) !important;
+}
+
+/* 2. Reset del tasto quando passi sulla card: deve rimanere trasparente con bordo verde */
+.vibe-password-card:hover .btn-vibe-color {
+    background: transparent !important;
+    color: #00ff41 !important;
+    box-shadow: none !important;
+    border: 1px solid #00ff41 !important;
+}
+
+/* 3. Il tasto si illumina (diventa pieno) SOLO quando il mouse tocca il tasto stesso */
+.btn-vibe-color:hover {
+    background: #00ff41 !important;
+    color: #000000 !important; /* Testo nero per leggibilità sul verde */
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.6) !important;
+}

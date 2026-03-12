@@ -19,10 +19,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="progetti.html">Progetti</a></li>
             <li><a href="contatti.html">Contatti</a></li>
-            <li>
         </ul>
     </nav>
-
     <main class="container">
         <header>
             <h1>I Miei Progetti</h1>
@@ -31,24 +29,31 @@
 
         <div class="projects-grid">
             
-            <div class="project-card featured gallery-card">
-                <div class="project-gallery">
-                    <a href="vibesolarlogopng.png" data-fancybox="gallery" data-caption="Vibe Solar - Dashboard Principale">
-                        <img src="vibesolarlogopng.png" alt="Design Vibe Solar" class="gallery-img">
-                    </a>
-                </div>
-
-                <div class="card-content">
-                    <span class="tag">Flagship Project</span>
-                    <h2>Solar Vibe 3.0</h2>
-                    <p>Soluzione applicativa e strumento volto a monitorare e gestire le previsioni della produzione dei sistemi energetici del Camper/Van.</p>
-                        <a href="vibe-solar.html" class="btn-contact">APPROFONDISCI IL PROGETTO →</a>
-</div>
-            </div>
-
-<section class="project-card featured neon-hover-card" 
-         style="margin-bottom: 50px; display: flex; align-items: center; gap: 40px; padding: 30px; overflow: hidden;">
+<section class="project-card featured neon-hover-card vibe-solar-card"        
+         style="margin-bottom: 50px; display: flex; align-items: center; gap: 40px; padding: 30px; overflow: hidden; border: 1px solid rgba(0, 162, 255, 0.3);">
     
+    <div class="project-image" style="flex: 1; display: flex; justify-content: center; align-items: center; min-width: 150px;">
+        <div style="width: 100%; max-width: 250px; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; border: 2px solid rgba(0, 162, 255, 0.5); box-shadow: 0 0 20px rgba(0, 162, 255, 0.2);">
+            <img src="vibesolarlogocerchio.png" alt="Logo Vibe Solar" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </div>
+
+    <div class="card-content" style="flex: 1.5;">
+        <span class="tag" style="background: rgba(0, 162, 255, 0.1); color: #00a2ff; border: 1px solid rgba(0, 162, 255, 0.2); font-weight: bold;">
+            Flagship Project
+        </span>
+        <h2 style="border: none; margin-top: 15px; margin-bottom: 10px;">Vibe Solar 3.0</h2>
+        <p style="color: var(--text-muted);">
+            Soluzione applicativa e strumento volto a monitorare e gestire le previsioni della produzione dei sistemi energetici del Camper/Van.
+        </p>
+        <a href="vibe-solar.html" class="btn-contact">
+            APPROFONDISCI IL PROGETTO →
+        </a>
+    </div>
+</section>
+
+<section class="project-card featured neon-hover-card youtube-card" 
+         style="margin-bottom: 50px; display: flex; align-items: center; gap: 40px; padding: 30px; overflow: hidden; border: 1px solid rgba(214, 51, 255, 0.3);">    
     <div class="project-image" style="flex: 1; display: flex; justify-content: center; align-items: center; min-width: 150px;">
         <img src="S&R LOGO.png" alt="Slowed & Reverbed Logo" 
              style="width: 100%; max-width: 300px; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 50%; border: 2px solid rgba(214, 51, 255, 0.2);">
@@ -67,17 +72,22 @@
         </a>
     </div>
 </section>
-    <div class="project-card featured vibe-card gallery-card">
-    
 
+<div class="project-card featured neon-hover-card vibe-password-card"      
+    style="margin-bottom: 50px; border: 1px solid rgba(0, 255, 65, 0.3); padding: 30px;">
+    
     <div class="card-content">
         <span class="tag" style="background: rgba(0, 255, 65, 0.1); color: #00ff41; border: 1px solid rgba(0, 255, 65, 0.3); font-weight: bold;">
             Cyber Security & UX
         </span>
-        <h2>Vibe Password v2.0</h2>
-        <p>Un generatore di password avanzato con analisi dell'entropia in tempo reale e stima dei tempi di attacco. Progettato per unire sicurezza e un'estetica High-Tech.</p>
+        <h2 style="border: none; margin-top: 15px; margin-bottom: 10px;">Vibe Password v2.0</h2>
+        <p style="color: var(--text-muted);">
+            Un generatore di password avanzato con analisi dell'entropia in tempo reale e stima dei tempi di attacco. Progettato per unire sicurezza e un'estetica High-Tech.
+        </p>
         
-        <a href="dettaglio-password.html" class="btn-contact btn-vibe-color">APPROFONDISCI IL PROGETTO →</a>
+        <a href="dettaglio-password.html" class="btn-contact btn-vibe-color">
+            APPROFONDISCI IL PROGETTO →
+        </a>
     </div>
 </div>
         </div>
@@ -121,9 +131,7 @@ Fancybox.bind("[data-fancybox]", {
   compact: false,
   idle: false,
 });
-<body class="home-page">
-    <nav class="container nav-home">
-        </nav>
+
     </script>
     
 </body>
