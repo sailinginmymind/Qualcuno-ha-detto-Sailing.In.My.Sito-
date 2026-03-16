@@ -1267,3 +1267,34 @@ html, body {
         text-align: center !important;
     }
 }
+
+/* --- EFFETTI GLOW AL PASSAGGIO (HOVER) --- */
+
+/* 1. Vibe Solar (Blu) */
+.project-card.featured:hover {
+    transform: translateY(-5px); /* Sollevamento leggero */
+    box-shadow: 0 0 25px rgba(0, 168, 255, 0.4), 
+                0 0 50px rgba(0, 168, 255, 0.1);
+    border-color: rgba(0, 168, 255, 0.6) !important;
+}
+
+/* 2. Slowed & Reverbed (Viola) */
+.neon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(214, 51, 255, 0.4), 
+                0 0 50px rgba(214, 51, 255, 0.1);
+    border-color: rgba(214, 51, 255, 0.6) !important;
+}
+
+/* 3. Vibe Password (Verde) */
+.vibe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.4), 
+                0 0 50px rgba(0, 255, 65, 0.1);
+    border-color: rgba(0, 255, 65, 0.6) !important;
+}
+
+/* Transizione fluida per tutte le card */
+.project-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
