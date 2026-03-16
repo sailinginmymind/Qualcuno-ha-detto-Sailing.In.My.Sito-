@@ -1268,33 +1268,33 @@ html, body {
     }
 }
 
-/* --- EFFETTI GLOW AL PASSAGGIO (HOVER) --- */
+/* --- EFFETTI GLOW PERSONALIZZATI --- */
 
-/* 1. Vibe Solar (Blu) */
+/* 1. Vibe Solar - Glow BLU */
 .project-card.featured:hover {
-    transform: translateY(-5px); /* Sollevamento leggero */
-    box-shadow: 0 0 25px rgba(0, 168, 255, 0.4), 
-                0 0 50px rgba(0, 168, 255, 0.1);
-    border-color: rgba(0, 168, 255, 0.6) !important;
+    transform: translateY(-5px);
+    border-color: #00a8ff !important;
+    box-shadow: 0 10px 30px rgba(0, 168, 255, 0.3), 
+                0 0 20px rgba(0, 168, 255, 0.2);
 }
 
-/* 2. Slowed & Reverbed (Viola) */
+/* 2. Slowed & Reverbed - Glow VIOLA */
 .neon-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(214, 51, 255, 0.4), 
-                0 0 50px rgba(214, 51, 255, 0.1);
-    border-color: rgba(214, 51, 255, 0.6) !important;
+    border-color: #d633ff !important;
+    box-shadow: 0 10px 30px rgba(214, 51, 255, 0.3), 
+                0 0 20px rgba(214, 51, 255, 0.2);
 }
 
-/* 3. Vibe Password (Verde) */
+/* 3. Vibe Password - Glow VERDE */
 .vibe-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(0, 255, 65, 0.4), 
-                0 0 50px rgba(0, 255, 65, 0.1);
-    border-color: rgba(0, 255, 65, 0.6) !important;
+    border-color: #00ff41 !important;
+    box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3), 
+                0 0 20px rgba(0, 255, 65, 0.2);
 }
 
-/* Transizione fluida per tutte le card */
+/* Transizione fluida per l'attivazione del glow */
 .project-card {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
 }
