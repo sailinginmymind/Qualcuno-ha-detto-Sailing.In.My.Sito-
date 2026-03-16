@@ -1239,3 +1239,31 @@ html, body {
         width: fit-content; /* Impedisce al bottone di allargarsi troppo */
     }
 }
+/* --- ALLINEAMENTO ELEMENTI SPECIFICI CARD --- */
+@media (max-width: 768px) {
+    
+    /* 1. Centra il Tag/Badge */
+    .tag {
+        display: inline-block;
+        margin: 0 auto 15px auto !important; /* Centra orizzontalmente e dà spazio sotto */
+        float: none; /* Rimuove eventuali float che spostano il tag */
+    }
+
+    /* 2. Centra il Pulsante Approfondisci */
+    /* Usiamo il selettore specifico per i pulsanti nelle card */
+    .project-card .btn-contact, 
+    .project-card .btn-vibe-color,
+    .project-card a.btn-contact {
+        display: table !important; /* Metodo infallibile per centrare link come blocchi */
+        margin: 25px auto 0 auto !important;
+        text-align: center;
+    }
+
+    /* 3. Forza il contenitore della card a gestire tutto al centro */
+    .project-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+}
