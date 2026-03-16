@@ -1202,3 +1202,40 @@ html, body {
         margin-right: 0 !important;
     }
 }
+
+/* --- CENTRAGGIO VIBE SOLAR MOBILE --- */
+@media (max-width: 768px) {
+    /* Centra il contenitore della card e il suo contenuto */
+    .vibe-solar-card, 
+    .neon-hover-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra orizzontalmente tutti i figli */
+        text-align: center;  /* Centra il testo all'interno */
+        padding: 30px 20px !important;
+    }
+
+    /* Centra l'immagine/logo tondo */
+    .project-image-solar,
+    .circular-frame-solar {
+        margin: 0 auto 20px auto !important; /* Forza il centraggio orizzontale */
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Assicura che la descrizione non sia troppo larga e sia centrata */
+    .vibe-solar-card p,
+    .neon-hover-card p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    /* Centra il pulsante "Approfondisci" */
+    .btn-contact, 
+    .btn-vibe-color {
+        display: inline-block;
+        margin: 20px auto 0 auto !important;
+        width: fit-content; /* Impedisce al bottone di allargarsi troppo */
+    }
+}
