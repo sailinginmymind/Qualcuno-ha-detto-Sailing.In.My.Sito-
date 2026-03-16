@@ -1161,26 +1161,31 @@ html, body {
 /* 3. Fix specifico per la Nav Bar su Mobile */
 @media (max-width: 768px) {
     nav.container {
-        padding: 10px 15px !important;
-        width: 100% !important;
-        max-width: 100vw !important;
+        padding: 15px 10px !important; /* Riduciamo il padding per guadagnare spazio */
     }
 
     nav ul {
-        flex-direction: column; /* Mette Logo e Link uno sopra l'altro */
-        gap: 10px;
-        text-align: center;
+        display: flex;
+        flex-direction: row; /* Li teniamo sulla stessa riga */
+        justify-content: space-between; /* Il logo a sinistra, i link a destra */
+        align-items: center;
+        width: 100%;
+        gap: 5px; /* Spazio minimo tra gli elementi */
     }
 
+    /* Gestione dei Link */
     nav a {
-        margin-left: 0 !important; /* Rimuove il margine che spingeva i link a destra */
-        font-size: 0.9rem;
+        margin-left: 10px !important; /* Margine ridotto rispetto ai 20px originali */
+        font-size: 0.85rem; /* Testo leggermente più piccolo per farlo stare in riga */
+        white-space: nowrap; /* Impedisce al testo di andare a capo */
     }
 
     .logo {
-        font-size: 1.8rem !important; /* Riduce leggermente il logo su telefono */
-        margin-bottom: 5px;
+        font-size: 1.5rem !important; /* Logo più piccolo per lasciare spazio ai link */
+        letter-spacing: -1px;
+        margin-left: 0 !important;
     }
+}
 
     /* Fix per il contenitore principale */
     .container {
